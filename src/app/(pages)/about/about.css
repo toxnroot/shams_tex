@@ -1,0 +1,306 @@
+
+        /* تخطيط الصفحة الأساسي */
+        .aboutContainer {
+          font-family: 'Cairo', 'Tajawal', sans-serif;
+          direction: rtl;
+          text-align: right;
+          color: var(--black);
+ 
+          line-height: 1.6;
+        }
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        .section {
+          padding: 80px 0;
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .section.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        h1, h2, h3, h4 {
+          font-weight: 700;
+          margin-bottom: 1rem;
+          color: var(--black);
+        }
+
+        h2 {
+          font-size: 2.5rem;
+          text-align: center;
+          margin-bottom: 3rem;
+          position: relative;
+        }
+
+        h2:after {
+          content: '';
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 4px;
+          background-color: var(--gold);
+        }
+
+        /* الهيدر والصورة الرئيسية */
+        .hero {
+          height: 500px;
+          background-image: url('/api/placeholder/1920/500');
+          background-size: cover;
+          background-position: center;
+          position: relative;
+          color: var(--white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .heroContent {
+          position: relative;
+          z-index: 2;
+          max-width: 800px;
+          padding: 0 20px;
+        }
+
+        .heroContent h1 {
+          font-size: 4rem;
+          color: var(--gold);
+          margin-bottom: 1rem;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .heroContent p {
+          font-size: 1.5rem;
+          color: var(--white);
+        }
+
+        /* قسم من نحن */
+        .aboutGrid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 50px;
+          align-items: center;
+        }
+
+        .aboutText p {
+          margin-bottom: 1.5rem;
+          font-size: 1.1rem;
+          line-height: 1.8;
+        }
+
+        .imageWrapper {
+          border: 5px solid var(--gold);
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* قسم الرؤية والرسالة */
+        .visionMission {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
+
+        .visionBox, .missionBox {
+          background-color: var(--black);
+          color: var(--white);
+          padding: 40px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          position: relative;
+          overflow: hidden;
+          height: 100%;
+        }
+
+        .visionBox:before, .missionBox:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 5px;
+          background-color: var(--gold);
+        }
+
+        .visionBox h3, .missionBox h3 {
+          color: var(--gold);
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+        }
+
+        /* قسم القيم */
+        .valuesGrid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+        }
+
+        .valueCard {
+          background-color: var(--gray-light);
+          padding: 30px;
+          border-radius: 10px;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .valueCard:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .valueIcon {
+          width: 70px;
+          height: 70px;
+          background-color: var(--gold);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 20px;
+        }
+
+        .valueCard h3 {
+          font-size: 1.5rem;
+          margin-bottom: 15px;
+        }
+
+        /* قسم المنتجات */
+        .productsGrid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+        }
+
+        .productCard {
+          background-color: var(--white);
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+
+        .productCard:hover {
+          transform: translateY(-10px);
+        }
+
+        .productImage {
+          height: 200px;
+          overflow: hidden;
+        }
+
+        .productCard h3 {
+          color: var(--black);
+          padding: 15px 15px 5px;
+          font-size: 1.3rem;
+        }
+
+        .productCard p {
+          padding: 0 15px 20px;
+          color: var(--black-light);
+        }
+
+        /* قسم الاتصال */
+        .contactSection {
+          background-color: var(--gray-light);
+        }
+
+        .contactGrid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 50px;
+          align-items: center;
+        }
+
+        .contactItem {
+          display: flex;
+          margin-bottom: 20px;
+          align-items: center;
+        }
+
+        .contactItem i {
+          width: 40px;
+          height: 40px;
+          background-color: var(--gold);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 15px;
+        }
+
+        .socialIcons {
+          display: flex;
+          margin-top: 30px;
+        }
+
+        .socialIcon {
+          width: 40px;
+          height: 40px;
+          background-color: var(--black);
+          border-radius: 50%;
+          margin-left: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--white);
+          transition: background-color 0.3s ease;
+        }
+
+        .socialIcon:hover {
+          background-color: var(--gold);
+        }
+
+        .mapPlaceholder {
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+       
+          
+          .heroContent h1 {
+            font-size: 3rem;
+          }
+          
+          .section {
+            padding: 60px 0;
+          }
+          
+          .footerLinks {
+            margin-top: 30px;
+          }
+        
+
+        @media (max-width: 600px) {
+          .valuesGrid,
+          .productsGrid {
+            grid-template-columns: 1fr;
+          }
+          
+          .heroContent h1 {
+            font-size: 2.5rem;
+          }
+          
+          h2 {
+            font-size: 2rem;
+          }
+        }

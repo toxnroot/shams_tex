@@ -1,0 +1,432 @@
+
+
+        /* تخطيط الصفحة الأساسي */
+        .servicesContainer {
+          font-family: 'Cairo', 'Tajawal', sans-serif;
+          direction: rtl;
+          text-align: right;
+          color: var(--black);
+          background-color: var(--white);
+          line-height: 1.6;
+        }
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        .section {
+          padding: 80px 0;
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .section.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .goldBackground {
+          background-color: var(--black);
+          color: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+          font-weight: 700;
+          margin-bottom: 1rem;
+          color: var(--black);
+        }
+
+        .goldBackground h2, .goldBackground h3 {
+          color: var(--gold);
+        }
+
+        h2 {
+          font-size: 2.5rem;
+          text-align: center;
+          margin-bottom: 3rem;
+          position: relative;
+        }
+
+        h2:after {
+          content: '';
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 4px;
+          background-color: var(--gold);
+        }
+
+        /* الهيدر والصورة الرئيسية */
+        .hero {
+          height: 400px;
+          background-image: url('/api/placeholder/1920/400');
+          background-size: cover;
+          background-position: center;
+          position: relative;
+          color: var(--white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .heroContent {
+          position: relative;
+          z-index: 2;
+          max-width: 800px;
+          padding: 0 20px;
+        }
+
+        .heroContent h1 {
+          font-size: 4rem;
+          color: var(--gold);
+          margin-bottom: 1rem;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .heroContent p {
+          font-size: 1.5rem;
+          color: var(--white);
+        }
+
+        /* مقدمة الخدمات */
+        .introGrid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 50px;
+          align-items: center;
+        }
+
+        .introText p {
+          margin-bottom: 1.5rem;
+          font-size: 1.1rem;
+          line-height: 1.8;
+        }
+
+        .imageWrapper {
+          border: 5px solid var(--gold);
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* الخدمات الرئيسية */
+        .servicesGrid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+        }
+
+        .serviceCard {
+          background-color: rgba(255, 255, 255, 0.05);
+          padding: 30px;
+          border-radius: 10px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          height: 100%;
+          border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .serviceCard:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+          border-color: var(--gold);
+        }
+
+        .serviceIcon {
+          width: 70px;
+          height: 70px;
+          background-color: var(--gold);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+
+        .serviceCard h3 {
+          font-size: 1.5rem;
+          margin-bottom: 15px;
+        }
+
+        .serviceFeatures {
+          margin-top: 20px;
+          padding-right: 20px;
+        }
+
+        .serviceFeatures li {
+          margin-bottom: 8px;
+          position: relative;
+        }
+
+        .serviceFeatures li:before {
+          content: '';
+          position: absolute;
+          right: -20px;
+          top: 10px;
+          width: 8px;
+          height: 8px;
+          background-color: var(--gold);
+          border-radius: 50%;
+        }
+
+        /* الخدمات المتخصصة */
+        .specializedGrid {
+          display: flex;
+          flex-direction: column;
+          gap: 60px;
+        }
+
+        .specializedItem {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+          align-items: center;
+        }
+
+        .specializedItem.reverse {
+          direction: ltr;
+        }
+
+        .specializedItem.reverse .specializedContent {
+          direction: rtl;
+        }
+
+        .specializedImage {
+          overflow: hidden;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .specializedContent h3 {
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+          color: var(--gold);
+        }
+
+        .specializedContent p {
+          font-size: 1.1rem;
+          line-height: 1.8;
+        }
+
+        /* الخدمات المخصصة */
+        .customServicesWrapper {
+          text-align: center;
+        }
+
+        .customIntro {
+          max-width: 800px;
+          margin: 0 auto 40px;
+          font-size: 1.2rem;
+          color: var(--gold-light);
+        }
+
+        .customServicesGrid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+        }
+
+        .customCard {
+          background-color: rgba(255, 255, 255, 0.05);
+          padding: 30px;
+          border-radius: 10px;
+          border: 1px solid rgba(212, 175, 55, 0.3);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          height: 100%;
+        }
+
+        .customCard:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+          border-color: var(--gold);
+        }
+
+        .customCard h3 {
+          margin-bottom: 15px;
+          font-size: 1.4rem;
+        }
+
+        /* لماذا تختارنا */
+        .reasonsGrid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+        }
+
+        .reasonCard {
+          background-color: var(--gray-light);
+          padding: 30px;
+          border-radius: 10px;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          height: 100%;
+        }
+
+        .reasonCard:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .reasonIcon {
+          width: 60px;
+          height: 60px;
+          background-color: var(--gold);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 20px;
+        }
+
+        .reasonCard h3 {
+          font-size: 1.3rem;
+          margin-bottom: 15px;
+        }
+
+        /* قسم الاتصال */
+        .contactSection {
+          background-color: var(--gray-light);
+        }
+
+        .contactIntro {
+          text-align: center;
+          max-width: 800px;
+          margin: 0 auto 40px;
+          font-size: 1.2rem;
+        }
+
+        .contactButtons {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          margin-bottom: 40px;
+        }
+
+        .contactBtn {
+          padding: 15px 30px;
+          border-radius: 50px;
+          font-weight: 700;
+          font-size: 1.1rem;
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+
+        .primaryBtn {
+          background-color: var(--gold);
+          color: var(--black);
+        }
+
+        .primaryBtn:hover {
+          background-color: var(--gold-dark);
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .secondaryBtn {
+          background-color: var(--black);
+          color: var(--white);
+        }
+
+        .secondaryBtn:hover {
+          background-color: var(--black-light);
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contactInfo {
+          display: flex;
+          justify-content: center;
+          gap: 50px;
+          margin-top: 30px;
+        }
+
+        .contactItem {
+          display: flex;
+          align-items: center;
+        }
+
+        .contactItem i {
+          width: 40px;
+          height: 40px;
+          background-color: var(--gold);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 15px;
+        }
+
+        /* تصميم متجاوب */
+        @media (max-width: 1024px) {
+          .servicesGrid {
+            grid-template-columns: 1fr 1fr;
+          }
+
+          .reasonsGrid {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media (max-width: 900px) {
+          .introGrid,
+          .specializedItem {
+            grid-template-columns: 1fr;
+          }
+
+          .heroContent h1 {
+            font-size: 3rem;
+          }
+          
+          .section {
+            padding: 60px 0;
+          }
+          
+          .specializedItem.reverse {
+            direction: rtl;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .servicesGrid,
+          .customServicesGrid {
+            grid-template-columns: 1fr;
+          }
+          
+          .contactInfo {
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .reasonsGrid {
+            grid-template-columns: 1fr;
+          }
+          
+          .heroContent h1 {
+            font-size: 2.5rem;
+          }
+          
+          h2 {
+            font-size: 2rem;
+          }
+
+          .contactButtons {
+            flex-direction: column;
+            align-items: center;
+          }
+        }

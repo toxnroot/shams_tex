@@ -1,0 +1,66 @@
+ /* الفوتر */
+        footer {
+          background-color: var(--black);
+          color: var(--white);
+          padding: 60px 0 20px;
+        }
+
+        .footerContent {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          gap: 50px;
+          margin-bottom: 30px;
+        }
+
+        .footerLogo p {
+          color: var(--gold);
+          margin-top: 15px;
+          font-size: 1.1rem;
+        }
+
+        .footerLinks {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
+
+        .linkColumn h4 {
+          color: var(--gold);
+          margin-bottom: 20px;
+          font-size: 1.2rem;
+        }
+
+        .linkColumn ul {
+          list-style: none;
+          padding: 0;
+        }
+
+        .linkColumn ul li {
+          margin-bottom: 10px;
+        }
+
+        .linkColumn ul li a {
+          color: var(--white);
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+
+        .linkColumn ul li a:hover {
+          color: var(--gold);
+        }
+
+        .copyright {
+          text-align: center;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          padding-top: 20px;
+          font-size: 0.9rem;
+        }
+
+        /* تصميم متجاوب */
+        @media (max-width: 900px) {
+          .aboutGrid,
+          .visionMission,
+          .contactGrid,
+          .footerContent {
+            grid-template-columns: 1fr;
+          }}
